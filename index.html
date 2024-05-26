@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Search without AI udm=14</title>
+  <link rel="search" type="application/opensearchdescription+xml" href="https://vpnry.github.io/search/opensearch.xml" title="Google Search" />
+
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    button {
+      background-color: #51b954;
+      color: white;
+      font-size: 14px;
+      margin-top: 4px;
+
+    }
+
+    #pasteButton {
+      background-color: #ccc;
+      margin-bottom: 4px;
+    }
+
+    form input[type="text"] {
+      width: 60%;
+      height: 20px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Google Search without AI</h1>
+    <p>Search the web with udm=14</p>
+  </header>
+
+  <main>
+    <form action="https://google.com/search" method="get">
+      <input type="hidden" name="udm" value="14">
+      <button type="button" id="pasteButton">Paste</button>
+      <br />
+      <input type="text" name="q" width="100%" placeholder="Search Google..." required>
+      <br />
+      <button type="submit">Search</button>
+    </form>
+  </main>
+  <script>
+    const pasteButton = document.getElementById('pasteButton');
+    pasteButton.addEventListener('click', () => {
+      navigator.clipboard.readText()
+        .then(text => {
+          document.querySelector('input[name="q"]').value = text;
+        })
+        .catch(err => {
+          console.error('Failed to paste clipboard content:', err);
+        });
+    });
+  </script>
+</body>
+
+</html>
