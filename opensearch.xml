@@ -6,7 +6,8 @@
   <Image width="16" height="16" type="image/x-icon">https://www.google.com/favicon.ico</Image>
   <Url type="text/html" template="https://google.com/search?q={searchTerms}&amp;udm=14" />
   <Url type="application/x-suggestions+json"
-    template="https://www.google.com/complete/search?q={searchTerms}" />
+    template="https://www.google.com/complete/search?client=firefox&amp;q={searchTerms}" />
+
 
   <moz:SearchForm>https://www.google.com/search</moz:SearchForm>
 </OpenSearchDescription>
