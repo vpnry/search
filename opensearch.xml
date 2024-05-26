@@ -5,6 +5,8 @@
   <InputEncoding>UTF-8</InputEncoding>
   <Image width="16" height="16" type="image/x-icon">https://www.google.com/favicon.ico</Image>
   <Url type="text/html" template="https://google.com/search?q={searchTerms}&amp;udm=14" />
-  <Url type="application/opensearchdescription+xml" rel="search"
-    template="https://vpnry.github.io/search/opensearch.xml" />
+  <Url type="application/x-suggestions+json"
+    template="https://www.google.com/complete/search?q={searchTerms}" />
+
+  <moz:SearchForm>https://www.google.com/search</moz:SearchForm>
 </OpenSearchDescription>
